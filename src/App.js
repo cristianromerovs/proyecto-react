@@ -2,9 +2,10 @@ import './App.css';
 import './components/navbar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/Navbar';
-import ItemListContainer from './components/ItemListContainer';
+import ProductPicker from './components/product/ProductPicker';
 
 function App() {
+  // HOOK
   const item1 = 'Home';
   const item2 = 'Products';
   const item3 = 'About';
@@ -12,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar item1={item1} item2={item2} item3={item3} item4={item4}/>
-      <ItemListContainer greeting={'la tienda'}/>
+      <ProductPicker greeting={'la tienda'}/>
     </>
   );
 }
