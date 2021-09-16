@@ -2,7 +2,7 @@ import './App.css';
 import './components/navbar/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/Navbar';
-import ProductPicker from './components/product/ProductPicker';
+import ItemCount from './components/product/ItemCount';
 
 function App() {
   // HOOK
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar item1={item1} item2={item2} item3={item3} item4={item4}/>
-      <ProductPicker greeting={'la tienda'}/>
+      <ItemCount stock={10} initial={1} />
     </>
   );
 }

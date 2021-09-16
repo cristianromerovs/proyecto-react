@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import './product.css';
 
-export default function App() {
-  const [count, setCount] = useState(1);
-  const [stock] = useState(5);
+const ItemCount = ({ initial, stock, onAdd }) => {
+  const [count, setCount] = useState(initial);
+
   const sumarProducto = () => {
     if (count < stock) {
       setCount(count + 1);
     }
   };
+
   const restarProducto = () => {
     if (count > 1) {
       setCount(count - 1);
     }
   };
   const agregarProducto = () => {
+    //onAdd(count);
     if (count > 1) {
       console.log(count + ` Productos Agregados`);
     } else {
@@ -37,4 +39,6 @@ export default function App() {
       </button>
     </div>
   );
-}
+};
+
+export default ItemCount;
